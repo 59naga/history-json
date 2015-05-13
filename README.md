@@ -50,6 +50,108 @@ imported.undo();// undefined
 ```
 
 # API
+## `.add(history)`
+Return `index` of added `history`
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});// 0
+history.add({state:'two'});// 1
+history.add({state:'three'});// 2
+```
+
+## `.undo(override=false)`
+Return `history` via Changed `index` to previous
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});
+history.add({state:'two'});
+history.add({state:'three'});
+history.undo();// { state: 'two' }
+```
+
+## `.redo(override=false)`
+Return `history` via Changed `index` to following
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});
+history.add({state:'two'});
+history.add({state:'three'});
+history.undo();// { state: 'two' }
+history.redo();// { state: 'three' }
+```
+
+## `.current(override=false)`
+Return `history` by current `index`
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});
+history.add({state:'two'});
+history.add({state:'three'});
+history.current();// { state: 'three' }
+```
+
+## `.first(override=false)`
+Return `history` via Changed index to first
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});
+history.add({state:'two'});
+history.add({state:'three'});
+history.first();// { state: 'one' }
+```
+
+## `.last(override=false)`
+Return `history` via Changed index to last
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});
+history.add({state:'two'});
+history.add({state:'three'});
+history.last();// { state: 'three' }
+```
+
+## `.count()`
+Return `number` of histories
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});
+history.add({state:'two'});
+history.add({state:'three'});
+history.count()// 3
+```
+
+## `.get(index)`
+Return `history` by `index`
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});
+history.add({state:'two'});
+history.add({state:'three'});
+history.get(0)// { state: 'one' }
+```
+
+## `.destroy()`
+Delete all `histories`
+
+```js
+var history= new HistoryJson;
+history.add({state:'one'});
+history.add({state:'two'});
+history.add({state:'three'});
+history.count();// 3
+
+history.destroy();
+history.count();// 0
+```
+
 ## `.canUndo()`
 Return `true` if can undo.
 
@@ -76,120 +178,7 @@ history.undo();// { state: 'one' }
 history.canRedo();// true
 ```
 
-## `.count()`
-Return `number` of histories
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.count()// 3
-```
-
-## `.get()`
-Return history by index
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.get(0)// { state: 'one' }
-```
-
-## `.add()`
-Return index of added history
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});// 0
-history.add({state:'two'});// 1
-history.add({state:'three'});// 2
-```
-
-## `.destroy()`
-Delete all histories
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.count();// 3
-
-history.destroy();
-history.count();// 0
-```
-
-## `.i`
-The current index
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.i;// 2
-```
-
-## `.current(override=false)`
-Return history by current index
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.current();// { state: 'three' }
-```
-
-## `.undo(override=false)`
-Return history via Changed index to previous
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.undo();// { state: 'two' }
-```
-
-## `.redo(override=false)`
-Return history via Changed index to following
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.undo();// { state: 'two' }
-history.redo();// { state: 'three' }
-```
-
-## `.first(override=false)`
-Return history via Changed index to first
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.first();// { state: 'one' }
-```
-
-## `.last(override=false)`
-Return history via Changed index to last
-
-```js
-var history= new HistoryJson;
-history.add({state:'one'});
-history.add({state:'two'});
-history.add({state:'three'});
-history.last();// { state: 'three' }
-```
-
-## override option
+## Override option
 Override self properties by history if set `true`
 
 ```coffee
@@ -203,8 +192,9 @@ class Tool extends HistoryJson
 
 tool= new Tool
 tool.use 'Drill',{power:50}
-tool.undo(true)
+console.log(tool)# tool:'Drill',options:{power:50}
 
+tool.undo(true)
 console.log(tool)# tool:'Hammer',options:{power:20}
 ```
 
