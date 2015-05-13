@@ -61,7 +61,7 @@ history.add({state:'three'});// 2
 ```
 
 ## `.undo(override=false)`
-Return `history` via Changed `index` to previous
+Return `history` via Change `index` to previous
 
 ```js
 var history= new HistoryJson;
@@ -72,7 +72,7 @@ history.undo();// { state: 'two' }
 ```
 
 ## `.redo(override=false)`
-Return `history` via Changed `index` to following
+Return `history` via Change `index` to following
 
 ```js
 var history= new HistoryJson;
@@ -95,7 +95,7 @@ history.current();// { state: 'three' }
 ```
 
 ## `.first(override=false)`
-Return `history` via Changed index to first
+Return `history` via Change index to first
 
 ```js
 var history= new HistoryJson;
@@ -106,7 +106,7 @@ history.first();// { state: 'one' }
 ```
 
 ## `.last(override=false)`
-Return `history` via Changed index to last
+Return `history` via Change index to last
 
 ```js
 var history= new HistoryJson;
