@@ -52,7 +52,7 @@ imported.undo();// undefined
 ```
 
 # API
-## `.add(history,options)`
+## `.add(history)`
 Return `index` of added `history`
 But, __Doesn't add__ if duplicate of previous history.
 
