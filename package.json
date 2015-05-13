@@ -1,0 +1,30 @@
+{
+  "name": "history-json",
+  "main": "history-json.js",
+  "version": "0.0.0-beta.0",
+  "description": "Implement undo/redo by Accumulating json",
+
+  "scripts": {
+    "postinstall": "coffee -o lib -c src",
+
+    "start": "jasminetea test --verbose --lint --watch",
+    "test": "jasminetea test --verbose --lint --cover --report"
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.2"
+  },
+  "devDependencies": {
+    "jasminetea": "^0.1.30-rc.1"
+  },
+
+  "author": "59naga <i59naga@icloud.com> (http://berabou.me)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/59naga/history-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/59naga/history-json/issues"
+  },
+  "homepage": "https://github.com/59naga/history-json#readme"
+}
