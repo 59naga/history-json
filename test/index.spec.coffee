@@ -86,6 +86,12 @@ describe 'HistoryJson',->
     expect(history.first()).toEqual 'one'
     expect(history.last()).toEqual 'two'
 
+  it 'Ignore duplicate of previous history',->
+    history= new HistoryJson
+    history.add 'one'
+    history.add 'one'
+    expect(history.count()).toEqual 1
+
   it 'Prune history of subsequent',->
     history= new HistoryJson
     history.add 'one'

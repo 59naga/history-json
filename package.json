@@ -1,7 +1,7 @@
 {
   "name": "history-json",
   "main": "history-json.js",
-  "version": "0.0.0-beta.0",
+  "version": "0.0.0-beta.1",
   "description": "Implement undo/redo by Accumulating json",
 
   "scripts": {

@@ -15,9 +15,12 @@ class HistoryJson
 
   count: -> @histories.length
   get: (i)-> @histories[i]
-  add: (history)->
-    @histories.length= @i+1
-    @histories.push JSON.stringify history
+  add: (data)->
+    history= JSON.stringify data
+    if history isnt @histories[@i]
+      @histories.length= @i+1
+      @histories.push history
+
     @i= @count()-1
   destroy: ->
     @histories.length= 0

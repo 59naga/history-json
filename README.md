@@ -52,13 +52,16 @@ imported.undo();// undefined
 ```
 
 # API
-## `.add(history)`
+## `.add(history,options)`
 Return `index` of added `history`
+But, __Doesn't add__ if duplicate of previous history.
 
 ```js
 var history= new HistoryJson;
 history.add({state:'one'});// 0
 history.add({state:'two'});// 1
+history.add({state:'three'});// 2
+
 history.add({state:'three'});// 2
 ```
 
