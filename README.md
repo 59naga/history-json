@@ -1,11 +1,28 @@
-# Installation  [![NPM version][npm-image]][npm] [![Build Status][travis-image]][travis] [![Coverage Status][coveralls-image]][coveralls]
+# History-json [![NPM version][npm-image]][npm] [![Build Status][travis-image]][travis] [![Coverage Status][coveralls-image]][coveralls]
+
+## Installation
+### Via npm
 ```bash
-$ npm install history-json
+$ npm install history-json --save
+```
+```js
+var HistoryJson= require('history-json');
+console.log(HistoryJson); //function
+```
+
+### Via bower
+```bash
+$ bower install history-json --save
+```
+```html
+<script src="bower_components/history-json/history-json.min.js"></script>
+<script>
+  console.log(HistoryJson); //function
+</script>
 ```
 
 ## Usage
 ```js
-var HistoryJson= require('./');
 var history= new HistoryJson;
 
 history.add({state:'one'});
