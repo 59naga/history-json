@@ -1,5 +1,7 @@
 # History-json [![NPM version][npm-image]][npm] [![Build Status][travis-image]][travis] [![Coverage Status][coveralls-image]][coveralls]
 
+> Implement undo/redo by Accumulating json
+
 ## Installation
 ### Via npm
 ```bash
