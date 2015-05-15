@@ -211,8 +211,8 @@ License
 
 [License]: http://59naga.mit-license.org/
 
-[sauce-image]: https://saucelabs.com/browser-matrix/59798.svg?auth=b7f253595076da708b2bd9866422ae63
-[sauce]: https://saucelabs.com/u/59798
+[sauce-image]: https://saucelabs.com/browser-matrix/history-json.svg?auth=b7f253595076da708b2bd9866422ae63
+[sauce]: https://saucelabs.com/u/history-json
 [npm-image]:https://img.shields.io/npm/v/history-json.svg?style=flat-square
 [npm]: https://npmjs.org/package/history-json
 [travis-image]: http://img.shields.io/travis/59naga/history-json.svg?style=flat-square
