@@ -12,7 +12,7 @@
 
     "start": "jasminetea test --verbose --lint --watch",
     "test": "jasminetea test --verbose --lint --cover --report",
-    "posttest": "zuul test/index.spec",
+    "posttest": "zuul test/index.spec"
   },
   "dependencies": {
     "coffee-script": "^1.9.2"
