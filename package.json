@@ -11,7 +11,8 @@
     "update": "git tag v$(jqn bower version) &&  git push --tags",
 
     "start": "jasminetea test --verbose --lint --watch",
-    "test": "jasminetea test --verbose --lint --cover --report"
+    "test": "jasminetea test --verbose --lint --cover --report",
+    "posttest": "zuul test/index.spec",
   },
   "dependencies": {
     "coffee-script": "^1.9.2"
@@ -19,9 +20,11 @@
   "devDependencies": {
     "browserify": "^10.1.3",
     "coffeeify": "^1.1.0",
+    "jasmine": "^2.3.1",
     "jasminetea": "^0.1.30-rc.3",
     "jqn": "0.0.3",
-    "uglify-js": "^2.4.21"
+    "uglify-js": "^2.4.21",
+    "zuul": "^3.0.0"
   },
 
   "author": "59naga <i59naga@icloud.com> (http://berabou.me)",

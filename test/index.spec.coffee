@@ -1,4 +1,4 @@
-HistoryJson= require '../'
+HistoryJson= require '../src'
 
 describe 'HistoryJson',->
   it 'Walking the broadway of histories',->
