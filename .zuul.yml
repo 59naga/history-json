@@ -1,4 +1,4 @@
-ui: jasmine
+ui: jasmine2
 browsers:
   - name: chrome
     version: [latest]
