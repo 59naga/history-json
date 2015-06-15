@@ -211,7 +211,7 @@ License
 
 [License]: http://59naga.mit-license.org/
 
-[sauce-image]: http://soysauce.berabou.me/59naga/history-json.svg
+[sauce-image]: http://soysauce.berabou.me/u/59naga/history-json.svg
 [sauce]: https://saucelabs.com/u/history-json
 [npm-image]:https://img.shields.io/npm/v/history-json.svg?style=flat-square
 [npm]: https://npmjs.org/package/history-json
