@@ -24,7 +24,7 @@
     "jasminetea": "^0.1.30-rc.3",
     "jqn": "0.0.3",
     "uglify-js": "^2.4.21",
-    "zuul": "git://github.com/59naga/zuul.git"
+    "zuul": "^3.0.0"
   },
 
   "author": "59naga <i59naga@icloud.com> (http://berabou.me)",
